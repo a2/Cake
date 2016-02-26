@@ -1,0 +1,23 @@
+PODS:
+  - Cake (0.1.0)
+  - FBSnapshotTestCase (2.0.7):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
+  - FBSnapshotTestCase/Core (2.0.7)
+  - FBSnapshotTestCase/SwiftSupport (2.0.7):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - Cake (from `../`)
+  - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  Cake:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Cake: 2924a0dbb8d3a6c142f6aaef1dd53277e0c2e2a3
+  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
+
+PODFILE CHECKSUM: f8c920ba7a1f81e00ad1fcc58c61f86996188284
+
+COCOAPODS: 1.0.0.beta.3

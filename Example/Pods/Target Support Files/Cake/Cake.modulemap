@@ -1,0 +1,6 @@
+framework module Cake {
+  umbrella header "Cake-umbrella.h"
+
+  export *
+  module * { export * }
+}

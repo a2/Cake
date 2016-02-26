@@ -1,0 +1,6 @@
+framework module Pods_Cake_Tests {
+  umbrella header "Pods-Cake_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
