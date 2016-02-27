@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Cake"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "As easy as pie charts."
   s.homepage         = "https://github.com/a2/Cake"
   s.license          = 'MIT'
