@@ -7,22 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0296EB69471C0D0235DBE025DB50973E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010C5A117CBA0FC46EF693F50A4D49E5 /* ReplaceMe.swift */; };
-		049880C9A49268ADF3F09ED9ED22D96F /* Cake-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA28C497397271CEC24EB158BA75835D /* Cake-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		061E53EFDA9495EAC526B7DF3A0B6A82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3014E4354A5EA7EA26A678156BDB4118 /* Foundation.framework */; };
 		06A20C9CD108AC2E4D9FC4C002CFF04C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3014E4354A5EA7EA26A678156BDB4118 /* Foundation.framework */; };
 		0C584FDC1D920406F0D40DE5EF8A9395 /* Pods-Cake_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9449AA0E7B6D3C4D0B3064E5DEBA5DAB /* Pods-Cake_Tests-dummy.m */; };
 		0E53729B518FECC855E7CF6A34B2ADA0 /* Pods-Cake_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7CAF434025F3BAF8FB904707E1CB5B5 /* Pods-Cake_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		163C6E8E5E7CEE1E0BEEB9CA0939DA3A /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 73003A0752F3CABAA497D1FD1F5E4E44 /* UIImage+Diff.m */; };
 		1F118728B3D74089480152A6B660EA9A /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = A729E2AD854B4CEB4EF52289C017EB3B /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		2A38B18384566B34AD2E00BAEFD63EC6 /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFF9F6DEC25584F239C4349895B59DF /* CakeView.swift */; };
 		35848D70EAC9237246BDF63457729694 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2523693A8A7BA4278BFC866F16021FFF /* FBSnapshotTestCase.m */; };
 		36E65544264F937F86CD6F624DDA5DBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3014E4354A5EA7EA26A678156BDB4118 /* Foundation.framework */; };
+		3F54EB69F7A4B5DE363769B989798369 /* Cake-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA28C497397271CEC24EB158BA75835D /* Cake-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41D8739E2720D3535592391C25507158 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12CC4BD9C5F6D514C917D7942DF2D2F4 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		441168039F49E8475BAE2BE87123D9DA /* Cake.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E99C815BBE8329DD9430D00A5D7099A /* Cake.bundle */; };
 		4AF5466446DC269D5EEFB5DAE6E0715E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278F7402F8FBFD95062198B8C7C6296 /* UIKit.framework */; };
-		4D9EE367AD0BB85DC11916600FAE77C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3014E4354A5EA7EA26A678156BDB4118 /* Foundation.framework */; };
 		52B0263F90696E7FD87CB146D5C5E2C1 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CAAAB29C54DB2D5220028C4110E45E6 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		52F7A46AB0053D8BB1D793B917D37BB2 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5208FE4A05C9114818BC72105E5F7 /* SwiftSupport.swift */; };
-		59D46081628CBAA9BE45A81CEEEFD32A /* Cake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE1C1492826EA9D5FF2319B13EBA50E /* Cake-dummy.m */; };
 		5D14695A69EC4A8DF7488D0FC59C105C /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E38041D93EDE9398D62F150F8F25DE47 /* FBSnapshotTestCasePlatform.m */; };
 		723FDDFD804188090511DEFA8309A06B /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0345D737618C6A063BD152389ACCBF87 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		72B95E1B21D2910EE337F2A582595ED3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3014E4354A5EA7EA26A678156BDB4118 /* Foundation.framework */; };
@@ -32,9 +30,14 @@
 		8A0A29B63BB500E445403B0D0FDFCB2D /* Pods-Cake_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D79C4C3816F901BE825181D3A66493 /* Pods-Cake_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9149AD06DA8D81CB964A3CDC43B2A485 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9734DF55B42ABEDC46CFC011F55EFE75 /* QuartzCore.framework */; };
 		AA8501741ABB8D75C6C47DE086BACD37 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFD97972C24EE7435D0E04686569BBE /* FBSnapshotTestController.m */; };
+		B54831500071EC4DD3A64EC166118682 /* Cake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE1C1492826EA9D5FF2319B13EBA50E /* Cake-dummy.m */; };
+		B72C92B8CB918605C7F721D6A657E476 /* CakeViewSampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34B35C337386C8E16EF941785A8F1BE /* CakeViewSampleDataSource.swift */; };
+		C8A5DF10619F7AB25FCF4216DEF4254C /* CakeAccessibilityElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E60F2E6BAEA2142065214769722780 /* CakeAccessibilityElement.swift */; };
 		CC2BD0A04199B280AD93F459968CAFC2 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF90F95FC2B36AB64D2FB3AF22E996D2 /* FBSnapshotTestCase-dummy.m */; };
+		D7288AFA0EF4D26FBBD7BB9B17AD6DDA /* Cake.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E99C815BBE8329DD9430D00A5D7099A /* Cake.bundle */; };
 		D9A0132B9E59C45CBD9BEBE529632439 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B54468EEFA0B2AAC0DA02C607A33D86 /* XCTest.framework */; };
 		EDD91D0CC316AC322E1607D3749F1C0A /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5121BCE99CCFB208275F3437CCF6EBB6 /* UIImage+Snapshot.m */; };
+		FDB9C7F180D196542B4E3AF7F64F9828 /* UIBezierPath+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F4CCB510E0E81F86F075823134287 /* UIBezierPath+Segment.swift */; };
 		FEB42FF444661CFD15D148DEFC91B2A6 /* Pods-Cake_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40485286EE1C68D58B141CCE72533E77 /* Pods-Cake_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -43,21 +46,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92C5597CF31074959FF906A119D24626;
+			remoteGlobalIDString = 759E8A0A7FC47C34B1FA1042ED6BFBD1;
 			remoteInfo = Cake;
-		};
-		32FEAEB1A33175C8E9F66C7B9DB7D30D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8753E029061E63925F19A47CD853259E;
-			remoteInfo = "Cake-Cake";
 		};
 		3434220183DD6F7C0B31FF35AB4056C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92C5597CF31074959FF906A119D24626;
+			remoteGlobalIDString = 759E8A0A7FC47C34B1FA1042ED6BFBD1;
 			remoteInfo = Cake;
 		};
 		E400CADB82A4370B0B8277A4F37DC5AB /* PBXContainerItemProxy */ = {
@@ -67,11 +63,19 @@
 			remoteGlobalIDString = A5C935B614DD08342117AD0B06959CB9;
 			remoteInfo = FBSnapshotTestCase;
 		};
+		E46F149AB333F9A890277E682CB8BFE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49E1EC58589BDFC1A0403BBEDF3FE1BB;
+			remoteInfo = "Cake-Cake";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		010C5A117CBA0FC46EF693F50A4D49E5 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		033F4CCB510E0E81F86F075823134287 /* UIBezierPath+Segment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Segment.swift"; sourceTree = "<group>"; };
 		0345D737618C6A063BD152389ACCBF87 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		03E60F2E6BAEA2142065214769722780 /* CakeAccessibilityElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CakeAccessibilityElement.swift; sourceTree = "<group>"; };
 		0EE4692BF9A76DAAA67A8FF4DABD27E8 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		0F01AA0F45B0B5CC535F9884FF44262A /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		12CC4BD9C5F6D514C917D7942DF2D2F4 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		598816F6EC7A5459D736DD875E282B7E /* Pods-Cake_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cake_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5999002674B86E70DC7970CEA62F278E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		5A8D40177F163E375CD4E0A98EC64C37 /* Pods-Cake_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cake_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5FFF9F6DEC25584F239C4349895B59DF /* CakeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CakeView.swift; sourceTree = "<group>"; };
 		602A1FDFE22576958F5BDCAA906D7EB4 /* Cake.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cake.modulemap; sourceTree = "<group>"; };
 		62D79C4C3816F901BE825181D3A66493 /* Pods-Cake_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cake_Tests-umbrella.h"; sourceTree = "<group>"; };
 		68AD5A14DAD266F352EF13ABF6B09B98 /* Pods-Cake_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cake_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 		C7CAF434025F3BAF8FB904707E1CB5B5 /* Pods-Cake_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cake_Example-umbrella.h"; sourceTree = "<group>"; };
 		DC6609630E92583605DCC4AAC5A316F6 /* Pods-Cake_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cake_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		DF90F95FC2B36AB64D2FB3AF22E996D2 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		E34B35C337386C8E16EF941785A8F1BE /* CakeViewSampleDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CakeViewSampleDataSource.swift; sourceTree = "<group>"; };
 		E38041D93EDE9398D62F150F8F25DE47 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		EA28C497397271CEC24EB158BA75835D /* Cake-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cake-umbrella.h"; sourceTree = "<group>"; };
 		F8B73409CBDD5AFBC6FFC9E773047A49 /* ResourceBundle-Cake-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Cake-Info.plist"; sourceTree = "<group>"; };
@@ -137,13 +143,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58277DB7A8AC62B4697F4160AB066A73 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		96317938B7BBB0DE5B6C6F27B4A6333F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,11 +154,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCA52061F5665FCC8497063645400FFA /* Frameworks */ = {
+		C719BC192A51A53BA588C30348397BB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9EE367AD0BB85DC11916600FAE77C2 /* Foundation.framework in Frameworks */,
+				061E53EFDA9495EAC526B7DF3A0B6A82 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA4D5536D32AAB664D31B40F05289A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,14 +244,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		6E9E4029B79F7853F8BB90074577E7E0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				010C5A117CBA0FC46EF693F50A4D49E5 /* ReplaceMe.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		726CFACE543B02578260D289D0EE4805 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +289,17 @@
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
+		8CD308199BAB8E042F917636E6604AE8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03E60F2E6BAEA2142065214769722780 /* CakeAccessibilityElement.swift */,
+				5FFF9F6DEC25584F239C4349895B59DF /* CakeView.swift */,
+				E34B35C337386C8E16EF941785A8F1BE /* CakeViewSampleDataSource.swift */,
+				033F4CCB510E0E81F86F075823134287 /* UIBezierPath+Segment.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		9A6BDD9AB6E10B0520E36008D806B93C /* Pods-Cake_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,17 +334,17 @@
 		B675D00512433ECF21EA49DA2C69B577 /* Cake */ = {
 			isa = PBXGroup;
 			children = (
-				C40DC2C2C4A3E9208673574F24F769A7 /* Pod */,
+				BCF7A2030BE39B01F837058B1AD8E08C /* Pod */,
 				7AA90E60CA94558615781B70A060A3B3 /* Support Files */,
 			);
 			name = Cake;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		C40DC2C2C4A3E9208673574F24F769A7 /* Pod */ = {
+		BCF7A2030BE39B01F837058B1AD8E08C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				6E9E4029B79F7853F8BB90074577E7E0 /* Classes */,
+				8CD308199BAB8E042F917636E6604AE8 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -372,11 +381,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2BC3354BAE65284B95F9BAD12C071143 /* Headers */ = {
+		09FF16F34822AFA0590709C39132E1D3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049880C9A49268ADF3F09ED9ED22D96F /* Cake-umbrella.h in Headers */,
+				3F54EB69F7A4B5DE363769B989798369 /* Cake-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,13 +440,13 @@
 			productReference = FCE96A3585407FB43CCD12FAE28F04CA /* Pods_Cake_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8753E029061E63925F19A47CD853259E /* Cake-Cake */ = {
+		49E1EC58589BDFC1A0403BBEDF3FE1BB /* Cake-Cake */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 440F118A2E27EC139CC0A3E6F9BDD1C2 /* Build configuration list for PBXNativeTarget "Cake-Cake" */;
+			buildConfigurationList = F3F69A5E05623977665C0C0366DC9D66 /* Build configuration list for PBXNativeTarget "Cake-Cake" */;
 			buildPhases = (
-				D419C3DA2D94FF67335603B1C98E53BF /* Sources */,
-				58277DB7A8AC62B4697F4160AB066A73 /* Frameworks */,
-				408A1FEFDC7B000EE223FD3F9C89BD2F /* Resources */,
+				E541064CAB012A46487D1D040F41ACE2 /* Sources */,
+				CA4D5536D32AAB664D31B40F05289A75 /* Frameworks */,
+				72B3A7ABAB33C3FCBC8AF6356AA6F74D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -448,19 +457,19 @@
 			productReference = 8E99C815BBE8329DD9430D00A5D7099A /* Cake.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		92C5597CF31074959FF906A119D24626 /* Cake */ = {
+		759E8A0A7FC47C34B1FA1042ED6BFBD1 /* Cake */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEEBAA0A9D8800870BB37F1088FC2401 /* Build configuration list for PBXNativeTarget "Cake" */;
+			buildConfigurationList = 5524CA8EDAF1D3F6DBFEAAA2F5ECE36A /* Build configuration list for PBXNativeTarget "Cake" */;
 			buildPhases = (
-				9FA9E5AEAB9AC5101FF3CE5B967179F5 /* Sources */,
-				DCA52061F5665FCC8497063645400FFA /* Frameworks */,
-				99096C739D82483A6D8D831929556975 /* Resources */,
-				2BC3354BAE65284B95F9BAD12C071143 /* Headers */,
+				FFA65A19FBBFB69A0D5942A3ED1321A3 /* Sources */,
+				C719BC192A51A53BA588C30348397BB1 /* Frameworks */,
+				4648A37734702DE273B1539150646820 /* Resources */,
+				09FF16F34822AFA0590709C39132E1D3 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				22657697680F9856DCF10D177C92B631 /* PBXTargetDependency */,
+				63C9BA61B8892F7AA5C8BC2787C9E4E4 /* PBXTargetDependency */,
 			);
 			name = Cake;
 			productName = Cake;
@@ -523,8 +532,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92C5597CF31074959FF906A119D24626 /* Cake */,
-				8753E029061E63925F19A47CD853259E /* Cake-Cake */,
+				759E8A0A7FC47C34B1FA1042ED6BFBD1 /* Cake */,
+				49E1EC58589BDFC1A0403BBEDF3FE1BB /* Cake-Cake */,
 				A5C935B614DD08342117AD0B06959CB9 /* FBSnapshotTestCase */,
 				BCB46DC3309D358E143C6FDB8EDA4AED /* Pods-Cake_Example */,
 				1AE841E3BA3FAF9860E862E13BAC006B /* Pods-Cake_Tests */,
@@ -533,18 +542,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		408A1FEFDC7B000EE223FD3F9C89BD2F /* Resources */ = {
+		4648A37734702DE273B1539150646820 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7288AFA0EF4D26FBBD7BB9B17AD6DDA /* Cake.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99096C739D82483A6D8D831929556975 /* Resources */ = {
+		72B3A7ABAB33C3FCBC8AF6356AA6F74D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441168039F49E8475BAE2BE87123D9DA /* Cake.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,30 +591,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9FA9E5AEAB9AC5101FF3CE5B967179F5 /* Sources */ = {
+		E541064CAB012A46487D1D040F41ACE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59D46081628CBAA9BE45A81CEEEFD32A /* Cake-dummy.m in Sources */,
-				0296EB69471C0D0235DBE025DB50973E /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D419C3DA2D94FF67335603B1C98E53BF /* Sources */ = {
+		FFA65A19FBBFB69A0D5942A3ED1321A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54831500071EC4DD3A64EC166118682 /* Cake-dummy.m in Sources */,
+				C8A5DF10619F7AB25FCF4216DEF4254C /* CakeAccessibilityElement.swift in Sources */,
+				2A38B18384566B34AD2E00BAEFD63EC6 /* CakeView.swift in Sources */,
+				B72C92B8CB918605C7F721D6A657E476 /* CakeViewSampleDataSource.swift in Sources */,
+				FDB9C7F180D196542B4E3AF7F64F9828 /* UIBezierPath+Segment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		22657697680F9856DCF10D177C92B631 /* PBXTargetDependency */ = {
+		63C9BA61B8892F7AA5C8BC2787C9E4E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Cake-Cake";
-			target = 8753E029061E63925F19A47CD853259E /* Cake-Cake */;
-			targetProxy = 32FEAEB1A33175C8E9F66C7B9DB7D30D /* PBXContainerItemProxy */;
+			target = 49E1EC58589BDFC1A0403BBEDF3FE1BB /* Cake-Cake */;
+			targetProxy = E46F149AB333F9A890277E682CB8BFE3 /* PBXContainerItemProxy */;
 		};
 		7A261FE9D3372915D79B88A648C4B297 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -616,13 +628,13 @@
 		B9CACB54B9C5791C7137507FDA8096CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cake;
-			target = 92C5597CF31074959FF906A119D24626 /* Cake */;
+			target = 759E8A0A7FC47C34B1FA1042ED6BFBD1 /* Cake */;
 			targetProxy = 3434220183DD6F7C0B31FF35AB4056C1 /* PBXContainerItemProxy */;
 		};
 		DA5BE841EC9339D97FCF12DB5D0D7E4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cake;
-			target = 92C5597CF31074959FF906A119D24626 /* Cake */;
+			target = 759E8A0A7FC47C34B1FA1042ED6BFBD1 /* Cake */;
 			targetProxy = 30543C90287A5A8364F77CD3802188FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -870,7 +882,23 @@
 			};
 			name = Debug;
 		};
-		7B9C4F11B9A94FFF2F9AEBECBD14B5BF /* Debug */ = {
+		76DACCB8C3E0FCB33E52F48FF9C346A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB7A25968E775737FE9125DF2503999 /* Cake.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Cake/ResourceBundle-Cake-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Cake;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		7CE9B29DA70BB5D71E67194BE5AD97DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDB7A25968E775737FE9125DF2503999 /* Cake.xcconfig */;
 			buildSettings = {
@@ -900,7 +928,7 @@
 			};
 			name = Debug;
 		};
-		9A822B9EB4B123396C4BBB4971F72381 /* Debug */ = {
+		83798A965D6F01E63D1F1B9DF2221BA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDB7A25968E775737FE9125DF2503999 /* Cake.xcconfig */;
 			buildSettings = {
@@ -915,51 +943,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
-		};
-		BA9E9A45D3794600DACBC7EA01FD4B89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDB7A25968E775737FE9125DF2503999 /* Cake.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Cake/ResourceBundle-Cake-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = Cake;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		CD531140E5957FFB3D05B0D25237C2DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDB7A25968E775737FE9125DF2503999 /* Cake.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cake/Cake-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cake/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cake/Cake.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Cake;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		DAF4CC3BB1B5439E1249799D7EFE73C3 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -990,6 +973,35 @@
 			};
 			name = Release;
 		};
+		F827F32A4F68E09B341750AD56B7CFBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB7A25968E775737FE9125DF2503999 /* Cake.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cake/Cake-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cake/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cake/Cake.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cake;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1011,11 +1023,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		440F118A2E27EC139CC0A3E6F9BDD1C2 /* Build configuration list for PBXNativeTarget "Cake-Cake" */ = {
+		5524CA8EDAF1D3F6DBFEAAA2F5ECE36A /* Build configuration list for PBXNativeTarget "Cake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9A822B9EB4B123396C4BBB4971F72381 /* Debug */,
-				BA9E9A45D3794600DACBC7EA01FD4B89 /* Release */,
+				7CE9B29DA70BB5D71E67194BE5AD97DC /* Debug */,
+				F827F32A4F68E09B341750AD56B7CFBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1029,20 +1041,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEEBAA0A9D8800870BB37F1088FC2401 /* Build configuration list for PBXNativeTarget "Cake" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B9C4F11B9A94FFF2F9AEBECBD14B5BF /* Debug */,
-				CD531140E5957FFB3D05B0D25237C2DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D01F19F543D7E9827D489104C92D99F8 /* Build configuration list for PBXNativeTarget "Pods-Cake_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F5E354E9D679265BDA2DC0030CF8FFE /* Debug */,
 				67A2B2B7C15808998D26793119DD0262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3F69A5E05623977665C0C0366DC9D66 /* Build configuration list for PBXNativeTarget "Cake-Cake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83798A965D6F01E63D1F1B9DF2221BA4 /* Debug */,
+				76DACCB8C3E0FCB33E52F48FF9C346A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
