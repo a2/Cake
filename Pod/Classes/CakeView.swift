@@ -14,52 +14,18 @@ public protocol CakeViewDataSource: class {
     func cakeView(cakeView: CakeView, fillColorForSegmentAtIndex index: Int) -> UIColor
 }
 
-public protocol CakeViewDelegate: class {
-    func cakeView(cakeView: CakeView, willDeselectSegmentAtIndex index: Int)
-    func cakeView(cakeView: CakeView, didDeselectSegmentAtIndex index: Int)
-
-    func cakeView(cakeView: CakeView, willSelectSegmentAtIndex index: Int)
-    func cakeView(cakeView: CakeView, didSelectSegmentAtIndex index: Int)
+public protocol CakeViewAccessibilityDataSource: CakeViewDataSource {
+    func cakeView(cakeView: CakeView, accessibilityLabelForSegmentAtIndex index: Int) -> String?
+    func cakeView(cakeView: CakeView, accessibilityValueForSegmentAtIndex index: Int) -> String?
 }
 
-class CakeSegmentView: UIView {
-    override class func layerClass() -> AnyClass {
-        return CAShapeLayer.self
-    }
+public let CakeViewWillSelectSegmentNotification = "CakeViewWillSelectSegmentNotification"
+public let CakeViewDidSelectSegmentNotification = "CakeViewDidSelectSegmentNotification"
 
-    var shapeLayer: CAShapeLayer {
-        return layer as! CAShapeLayer
-    }
+public let CakeViewNewSegmentIndexUserInfoKey = "newSegmentIndex"
+public let CakeViewOldSegmentIndexUserInfoKey = "oldSegmentIndex"
 
-    var bezierPath: UIBezierPath {
-        get {
-            return shapeLayer.path.map(UIBezierPath.init) ?? UIBezierPath()
-        }
-        set {
-            shapeLayer.path = newValue.CGPath
-        }
-    }
-
-    var fillColor: UIColor {
-        get {
-            return shapeLayer.fillColor.map(UIColor.init) ?? .blackColor()
-        }
-        set {
-            shapeLayer.fillColor = newValue.CGColor
-        }
-    }
-
-    override func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
-        return bezierPath.containsPoint(point)
-    }
-
-    override var accessibilityPath: UIBezierPath? {
-        get {
-            return UIAccessibilityConvertPathToScreenCoordinates(bezierPath, self)
-        }
-        set {}
-    }
-}
+public let CakeViewNoSegment = -1
 
 @IBDesignable
 public class CakeView: UIView {
@@ -68,7 +34,6 @@ public class CakeView: UIView {
             reloadData()
         }
     }
-    public weak var delegate: CakeViewDelegate?
 
     var segments = [CakeSegmentView]()
     var segmentValues = [Double]()
@@ -97,43 +62,31 @@ public class CakeView: UIView {
 
     @IBInspectable public var selectedSegmentDistance: CGFloat = 10
 
-    public var selectedSegmentIndex: Int? {
+    public var selectedSegmentIndex: Int = CakeViewNoSegment {
         willSet {
             if selectedSegmentIndex == newValue {
                 return
             }
 
-            if let newValue = newValue {
-                delegate?.cakeView(self, willSelectSegmentAtIndex: newValue)
-            }
-
-            if let index = selectedSegmentIndex {
-                delegate?.cakeView(self, willDeselectSegmentAtIndex: index)
-            }
+            NSNotificationCenter.defaultCenter().postNotificationName(CakeViewWillSelectSegmentNotification, object: self, userInfo: [CakeViewNewSegmentIndexUserInfoKey: newValue, CakeViewOldSegmentIndexUserInfoKey: selectedSegmentIndex])
         }
         didSet {
             if oldValue == selectedSegmentIndex {
                 return
             }
 
-            if let index = selectedSegmentIndex {
-                delegate?.cakeView(self, didDeselectSegmentAtIndex: index)
-            }
+            NSNotificationCenter.defaultCenter().postNotificationName(CakeViewDidSelectSegmentNotification, object: self, userInfo: [CakeViewNewSegmentIndexUserInfoKey: selectedSegmentIndex, CakeViewOldSegmentIndexUserInfoKey: oldValue])
 
             let newValue = selectedSegmentIndex
-            if let newValue = newValue {
-                delegate?.cakeView(self, didSelectSegmentAtIndex: newValue)
-            }
-
             UIView.animateWithDuration(0.3, delay: 0, options: [.AllowUserInteraction, .BeginFromCurrentState], animations: {
-                if let oldValue = oldValue {
+                if oldValue != CakeViewNoSegment {
                     self.segments[oldValue].transform = CGAffineTransformIdentity
                 }
 
-                if let index = newValue {
-                    let range = self.angleRangeForSegment(atIndex: index)
+                if newValue != CakeViewNoSegment {
+                    let range = self.angleRangeForSegment(atIndex: newValue)
                     let angle = (range.start + range.end) / 2 + M_PI / 2
-                    self.segments[index].transform = CGAffineTransformMakeTranslation(-self.selectedSegmentDistance * cos(CGFloat(angle)), -self.selectedSegmentDistance * sin(CGFloat(angle)))
+                    self.segments[newValue].transform = CGAffineTransformMakeTranslation(-self.selectedSegmentDistance * cos(CGFloat(angle)), -self.selectedSegmentDistance * sin(CGFloat(angle)))
                 }
             }, completion: nil)
         }
@@ -179,7 +132,12 @@ public class CakeView: UIView {
             segment.fillColor = dataSource?.cakeView(self, fillColorForSegmentAtIndex: i) ?? .blackColor()
             segment.frame = frame
             segment.isAccessibilityElement = true
-            addSubview(segment)
+            insertSubview(segment, atIndex: 0)
+
+            if let accessibilityDataSource = dataSource as? CakeViewAccessibilityDataSource {
+                segment.accessibilityLabel = accessibilityDataSource.cakeView(self, accessibilityLabelForSegmentAtIndex: i)
+                segment.accessibilityValue = accessibilityDataSource.cakeView(self, accessibilityValueForSegmentAtIndex: i)
+            }
         }
     }
 
@@ -204,10 +162,10 @@ public class CakeView: UIView {
             if selectedSegmentIndex != index {
                 selectedSegmentIndex = index
             } else {
-                selectedSegmentIndex = nil
+                selectedSegmentIndex = CakeViewNoSegment
             }
-        } else if selectedSegmentIndex != nil {
-            selectedSegmentIndex = nil
+        } else if selectedSegmentIndex != CakeViewNoSegment {
+            selectedSegmentIndex = CakeViewNoSegment
         }
     }
 

@@ -16,7 +16,7 @@ struct Category {
     let name: String
 }
 
-class ViewController: UIViewController, CakeViewDataSource, CakeViewDelegate, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, CakeViewAccessibilityDataSource, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var cakeView: CakeView!
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -51,8 +51,9 @@ class ViewController: UIViewController, CakeViewDataSource, CakeViewDelegate, UI
         super.viewDidLoad()
 
         cakeView.dataSource = self
-        cakeView.delegate = self
         totalAmountLabel.text = currencyFormatter.stringFromNumber(totalAmount)
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "cakeViewDidSelectSegment:", name: CakeViewDidSelectSegmentNotification, object: cakeView)
     }
     
     // MARK: - Table View
@@ -94,19 +95,28 @@ class ViewController: UIViewController, CakeViewDataSource, CakeViewDelegate, UI
         return categories[index].amount
     }
 
-    func cakeView(cakeView: CakeView, willDeselectSegmentAtIndex index: Int) {
-
+    func cakeView(cakeView: CakeView, accessibilityLabelForSegmentAtIndex index: Int) -> String? {
+        let category = categories[index]
+        return category.name
     }
 
-    func cakeView(cakeView: CakeView, didDeselectSegmentAtIndex index: Int) {
+    func cakeView(cakeView: CakeView, accessibilityValueForSegmentAtIndex index: Int) -> String? {
+        let category = categories[index]
 
+        let currencyAmount = currencyFormatter.stringFromNumber(category.amount)!
+        let percent = category.amount / totalAmount
+        let percentAmount = percentageFormatter.stringFromNumber(percent)!
+
+        return currencyAmount + ", " + percentAmount
     }
 
-    func cakeView(cakeView: CakeView, willSelectSegmentAtIndex index: Int) {
+    func cakeViewDidSelectSegment(note: NSNotification) {
+        guard let index = note.userInfo?[CakeViewNewSegmentIndexUserInfoKey] as? Int else { return }
 
-    }
-
-    func cakeView(cakeView: CakeView, didSelectSegmentAtIndex index: Int) {
-        tableView.selectRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0), animated: true, scrollPosition: .None)
+        if index != CakeViewNoSegment {
+            tableView.selectRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0), animated: true, scrollPosition: .None)
+        } else if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
 }
